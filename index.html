@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platter — Support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0D0D0F;
+    --surface: #18181C;
+    --accent: #F28C33;
+    --text: #F1EDE4;
+    --text-secondary: #9A9AA3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 2rem; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); margin-top: 0; margin-bottom: 40px; }
+  h2 { font-size: 1.3rem; margin-top: 48px; border-bottom: 1px solid rgba(242,140,51,0.3); padding-bottom: 8px; color: var(--accent); }
+  a { color: var(--accent); }
+  .card { background: var(--surface); border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
+  code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; }
+  footer { margin-top: 64px; color: var(--text-secondary); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Platter</h1>
+  <p class="subtitle">A physically-modeled vinyl scratch instrument for iPhone and iPad.</p>
+
+  <h2>Support</h2>
+  <p>Having trouble, found a bug, or have a feature request? Email
+    <a href="mailto:martoadler@gmail.com">martoadler@gmail.com</a> — include your device model and
+    iOS version if it's a bug report.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="card">
+    <strong>Where do samples come from?</strong>
+    <p>You can record from the microphone, import any audio file from your device, record audio
+    playing elsewhere on your device (system audio, via a Broadcast Extension), or pick one of the
+    12 samples built into the app's library.</p>
+  </div>
+  <div class="card">
+    <strong>Why does Platter ask for microphone access?</strong>
+    <p>Only to let you record a sample directly from the mic. If you never use that feature, the
+    mic is never active. Recordings stay on your device and are never uploaded anywhere.</p>
+  </div>
+  <div class="card">
+    <strong>What does "system audio" recording do?</strong>
+    <p>It uses iOS's Broadcast Extension to capture audio from other apps or the device itself
+    while you record, so you can turn any sound into a scratchable sample. The captured audio is
+    written to a private, on-device App Group container that only Platter reads — it is never
+    sent anywhere else.</p>
+  </div>
+  <div class="card">
+    <strong>What does the "Sync" feature do?</strong>
+    <p>Sync uses Apple's MultipeerConnectivity to let nearby devices on the same Platter session
+    follow one device's deck in real time (e.g. for a two-performer act). It only talks to other
+    nearby devices over local Wi-Fi/Bluetooth — never to the internet, and never automatically; it
+    only activates when you explicitly start a session.</p>
+  </div>
+  <div class="card">
+    <strong>Can I use Platter inside GarageBand or another host app?</strong>
+    <p>Yes — Platter includes an AUv3 Audio Unit plug-in with its own scratchable platter, so you
+    can scratch your own samples directly inside a compatible host.</p>
+  </div>
+
+  <h2>Privacy Policy</h2>
+  <p>Platter is built to keep your audio and performances on your device. Specifically:</p>
+  <ul>
+    <li>No analytics, advertising, or third-party tracking SDKs of any kind.</li>
+    <li>No account or sign-in — the app does not know who you are.</li>
+    <li>No data is ever sent to any server operated by the developer or anyone else.</li>
+    <li><strong>Microphone</strong> is used only when you choose to record a sample from it, and only
+      while you are actively recording.</li>
+    <li><strong>System audio recording</strong> (Broadcast Extension) captures audio only while you
+      have a broadcast actively running, writes it to a private on-device App Group container, and
+      never transmits it anywhere.</li>
+    <li><strong>Sync (MultipeerConnectivity)</strong> communicates only with other nearby devices
+      over local Wi-Fi/Bluetooth, only while you have started a sync session — it never reaches the
+      internet.</li>
+    <li>Samples, chop/loop settings, lesson progress, and recorded performances are stored only on
+      your device.</li>
+    <li>Exported audio or video leaves the device only when you explicitly share it via the system
+      share sheet.</li>
+  </ul>
+  <p>If this policy ever changes, the update will be posted on this page.</p>
+
+  <footer>
+    Platter · <a href="mailto:martoadler@gmail.com">martoadler@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
